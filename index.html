@@ -14,26 +14,29 @@
 <body>
 
     <nav class="text-slate-100 backdrop-blur-[15px] bg-[#00000001] fixed left-0 top-0 right-0 z-50">
-        <div class="container-bstr navbar px-20">
+        <div class="navbar px-5 sm:px-10 md:px-20">
             <div class="navbar-start">
-                <a href="" class="text-xl mt-5"><span class="text-[#ff9a9e]">@yield("</span>Yasz<span class="text-[#ff9a9e]">")</span> </a>
+                <a href="" class="text-md sm:text-xl mt-5"><span class="text-[#ff9a9e]">@yield("</span>Yasz<span class="text-[#ff9a9e]">")</span> </a>
             </div>
             
-            <div class="navbar-end sm:hidden">
-                <div class="dropdown dropdown-end">
-                    <div tabindex="0" role="button" class="btn btn-ghost m-1">
+            <div class="navbar-end block md:hidden">
+                <div class="dropdown ">
+                    <div id="dropdownToggle" role="button" class="m-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
                     </div>
-                    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a href="https://genztopup.web.id/">Homepage</a></li>
-                        <li><a href="https://genztopup.web.id/game">Game</a></li>
+                    <ul id="dropdownMenu" class="dropdown-content hidden absolute right-[30px] top-[70px] z-[3] font-light text-sm border-[#676767] border-[1px]">
+                        <li class=" bg-[#111827] hover:bg-slate-700 cursor-pointer"><a class="px-5 py-2 block w-full" href="#home">Homepage</a></li>
+                        <li class=" bg-[#111827] hover:bg-slate-700 cursor-pointer"><a class="px-5 py-2 block w-full" href="#about">About</a></li>
+                        <li class=" bg-[#111827] hover:bg-slate-700 cursor-pointer"><a class="px-5 py-2 block w-full" href="#skills">Skills</a></li>
+                        <li class=" bg-[#111827] hover:bg-slate-700 cursor-pointer"><a class="px-5 py-2 block w-full" href="#projects">Projects</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="navbar-end hidden sm:block">
+
+            <div class="navbar-end hidden md:block">
                 <div class="w-full flex justify-end">
                     <div class="flex space-x-7 text-sm">
-                        <a href="">Homepage</a>
+                        <a href="#home">Homepage</a>
                         <a href="#about">About</a>
                         <a href="#skills">Skills</a>
                         <a href="#projects">Projects</a>
@@ -44,8 +47,8 @@
         </div>
     </nav>
 
-    <section>
-        <div class="px-5 mt-28 text-center relative">
+    <section id="home">
+        <div class="px-5 pt-28 text-center relative">
             <div class="thumbnail-profile flex justify-center mb-8">
                 <img src="assets/img/character.png" width="200px" alt="img profile" class="">
             </div>
@@ -57,7 +60,7 @@
                 <a href="assets/pdf/resume.pdf" class="mx-3 bg-gradient-to-r from-[#ff9a9e] to-[#fecfef] bg-clip-text text-transparent border border-[#fecfef] hover:border-[#ff9a9e] px-5 py-2">Resume</a>
                 <a href="https://github.com/iyasz" class="mx-3 bg-gradient-to-r from-[#ff9a9e] to-[#fecfef] bg-clip-text text-transparent border border-[#fecfef] hover:border-[#ff9a9e] px-5 py-2">GitHub</a>
             </div>
-            <div class="flex justify-center absolute right-[50%] bottom-[-50%] translate-x-1/2 translate-y-1/2 my-20 opacity-30">
+            <div class="flex justify-center absolute right-[50%] bottom-[-40%] translate-x-1/2 translate-y-1/2 my-20 opacity-30">
                 <svg xmlns="http://www.w3.org/2000/svg" width="124" height="124" fill="#fecfef" viewBox="0 0 24 24"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
             </div>
         
@@ -336,6 +339,24 @@
             <a href="mailto:muhammad.ilyaasa@gmail.com" class="text-[#e7e7e7] text-sm font-thin">muhammad.ilyaasa@gmail.com</a>
         </div>
     </section>
+
+    <script>
+       const dropdownToggle = document.getElementById('dropdownToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        dropdownToggle.addEventListener('click', () => {
+            if (dropdownMenu.classList.contains('hidden')) {
+                dropdownMenu.classList.remove('hidden', 'dropdown-leave');
+                dropdownMenu.classList.add('block', 'dropdown-enter');
+            } else {
+                dropdownMenu.classList.remove('block', 'dropdown-enter');
+                dropdownMenu.classList.add('dropdown-leave');
+                setTimeout(() => {
+                    dropdownMenu.classList.add('hidden');
+                }, 75); 
+            }
+        });
+    </script>
 
     
 </body>
