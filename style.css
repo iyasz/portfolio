@@ -86,37 +86,38 @@ nav .wrapper-list .content a:hover {
 
 
 
-
 /* END NAVBAR SECTION  */
 
 /* HOME SECTION  */
 
 .container-home-wrapper {
-    background: linear-gradient(135deg, #FFA726, #FB8C00);
+    background: var(--bs-primary-color);
     height: 100vh;
     position: relative;
 }
 
 .container-home-wrapper .main-text {
     font-family: "Montserrat Alternates", sans-serif;
-    position: absolute;
+    /* position: absolute;
     bottom: 25%;
     left: 35%; 
-    width: 40%;
-    color: var(--bs-dark-primary-color);
+    width: 40%; */
+    /* color: var(--bs-dark-primary-color); */
     font-size: 110px;
     line-height: 1.1;
     font-weight: 600;
     text-align: right;
 }
 
-.container-home-wrapper .name-text {
+.container-home-wrapper .oval::before {
+    content: '';
+    background-color: white;
+    border-top-left-radius: 250%;
+    border-bottom-left-radius: 250%;
+    width: 50%;
+    height: 100%;
     position: absolute;
-    font-size: 40px;
-    letter-spacing: 7px;
-    bottom: 8%;
-    left: 17%;
-    line-height: 1.1;
+    
 }
 
 .side-backgorund {
