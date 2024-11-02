@@ -182,34 +182,5 @@ nav .wrapper-list .content a:hover {
 }
 
 
-.projects_img.project_1 {
-    animation: infinite-scroll 5s linear infinite;
-    animation-delay: -0s;
-}
-.projects_img.project_2 {
-    animation: infinite-scroll 5s linear infinite;
-    animation-delay: -0.5s;
-}
-.projects_img.project_3 {
-    animation: infinite-scroll 5s linear infinite;
-    animation-delay: -1s;
-}
-.projects_img.project_4 {
-    animation: infinite-scroll 5s linear infinite;
-    animation-delay: -1.5s;
-}
-.projects_img.project_5 {
-    animation: infinite-scroll 5s linear infinite;
-    animation-delay: -2s;
-}
-
-@keyframes infinite-scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
 
 /* END PROJECT SECTION  */
