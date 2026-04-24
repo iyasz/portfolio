@@ -1,0 +1,33 @@
+---
+import ExperienceCard from './ExperienceCard.astro';
+---
+
+<div class="mt-10">
+	<h2 class="text-slate-800 font-bold text-lg">Experiences</h2>
+	<ExperienceCard
+		logo="/src/assets/img/mss.avif"
+		logoAlt="Megah Sakti Singosari Logo"
+		role="Fullstack Developer"
+		company="PT. Megah Sakti Singosari"
+		type="Internship"
+		period="Feb 2026 - Mar 2026"
+		descriptions={[
+			"Redesigned and managed a WordPress-based online store, focusing on making the layout and features clearer and easier for customers to navigate.",
+			"Built a custom online store from scratch using Nuxt.js and Supabase to replace a more expensive solution, which helped the company cut down on budget.",
+		]}
+		class="mt-3"
+	/>
+	<ExperienceCard
+		logo="/src/assets/img/sdp.avif"
+		logoAlt="Solusi Data Pratama Logo"
+		role="Quality Assurance"
+		company="PT. Solusi Data Pratama"
+		type="Internship"
+		period="Dec 2022 - Mar 2023"
+		descriptions={[
+			"Performed end-to-end testing on the application, focusing on improving error response messages to make them more understandable for users.",
+			"Created detailed testing reports from an end-to-end perspective to document findings and support the development team.",
+		]}
+		class="mt-5"
+	/>
+</div>
